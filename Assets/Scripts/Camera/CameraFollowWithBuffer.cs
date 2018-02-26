@@ -25,11 +25,11 @@ public class CameraFollowWithBuffer : MonoBehaviour {
 	void Update () {
 		if(playerPosition.position.x > playerRightThreshold.position.x)
         {
-            this.transform.position = new Vector3(playerPosition.position.x + rightOffset, this.transform.position.y, this.transform.position.z);
+            this.transform.position = new Vector3(playerPosition.position.x - rightOffset, this.transform.position.y, this.transform.position.z);
         }
         else if (playerPosition.position.x < playerLeftThreshold.position.x)
         {
-            this.transform.position = new Vector3(playerPosition.position.x - leftOffset, this.transform.position.y, this.transform.position.z);
+            this.transform.position = new Vector3(playerPosition.position.x + leftOffset, this.transform.position.y, this.transform.position.z);
         }
 	}
 
